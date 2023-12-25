@@ -11,10 +11,7 @@ import {
 import {allFields} from './allFields'
 
 export const processor = new EvmBatchProcessor()
-    .setRpcEndpoint({
-        url: assertNotNull(process.env.RPC_BSC_HTTP),
-        rateLimit: 10
-    })
+    .setGateway(lookupArchive('binance'))
     .setFinalityConfirmation(5)
     .setFields(allFields)
     .addTrace({

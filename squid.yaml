@@ -14,7 +14,7 @@ deploy:
       - process:prod
     env:
       RPC_ENDPOINT: ${{ secrets.RPC_ENDPOINT }}
-      SQD_DEBUG: '*'
+#      SQD_DEBUG: '*'
   api:
     cmd:
       - sqd
